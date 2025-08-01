@@ -1,0 +1,25 @@
+D:\Repos\Youtube Downloader\bin\Debug\net8.0-windows\Youtube Downloader.exe
+D:\Repos\Youtube Downloader\bin\Debug\net8.0-windows\Youtube Downloader.deps.json
+D:\Repos\Youtube Downloader\bin\Debug\net8.0-windows\Youtube Downloader.runtimeconfig.json
+D:\Repos\Youtube Downloader\bin\Debug\net8.0-windows\Youtube Downloader.dll
+D:\Repos\Youtube Downloader\bin\Debug\net8.0-windows\Youtube Downloader.pdb
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\App.g.cs
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\Youtube Downloader_MarkupCompile.cache
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\Youtube Downloader_MarkupCompile.lref
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\MainWindow.baml
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\Youtube Downloader.g.resources
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\Youtube Downloader.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\Youtube Downloader.AssemblyInfoInputs.cache
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\Youtube Downloader.AssemblyInfo.cs
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\Youtube Downloader.csproj.CoreCompileInputs.cache
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\Youtube Downloader.dll
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\refint\Youtube Downloader.dll
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\Youtube Downloader.pdb
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\Youtube Downloader.genruntimeconfig.cache
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\ref\Youtube Downloader.dll
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\Youtube Downloader_Content.g.cs
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\Settings.g.cs
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\Settings.baml
+D:\Repos\Youtube Downloader\bin\Debug\net8.0-windows\Youtube Downloader.dll.config
+D:\Repos\Youtube Downloader\obj\Debug\net8.0-windows\ResourceDictionary.baml

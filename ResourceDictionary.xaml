@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="Button" x:Name="normal_btn_style">
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="Background" Value="#4287f5"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Youtube_Downloader</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="app_config.json" />
+    <None Remove="fetched_data.txt" />
+    <None Remove="Sprites\arrow-rotate-clockwise-270.png" />
+    <None Remove="Sprites\folder-orange.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="app_config.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fetched_data.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Sprites\arrow-rotate-clockwise-270.png" />
+    <Resource Include="Sprites\folder-orange.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,123 @@
+﻿<Window x:Class="Youtube_Downloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Youtube_Downloader"
+        mc:Ignorable="d"
+        Title="Youtube Downloader" Height="500" Width="650"
+        >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Viewbox x:Name="app_viewbox" Stretch="Uniform">
+        <Grid Width="650" Height="500">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Menu x:Name="main_strip" Margin="-10.5,0,-10,37">
+                <MenuItem x:Name="info_menu_btn" Click="info_menu_btn_Click" Header="Info"/>
+                <MenuItem x:Name="settings_menu_btn" Click="settings_menu_btn_Click" Header="Settings"/>
+            </Menu>
+
+            <TextBlock Grid.Row="0"
+                       Margin="0,10,0,10"
+                       FontSize="30"
+                       TextAlignment="Center"
+                       FontFamily="Arial Black"
+                       HorizontalAlignment="Center"
+                       Text="Youtube Downloader"/>
+
+            <GroupBox Grid.Row="1"
+                      Header=""
+                      HorizontalAlignment="Center"
+                      Margin="0,0,0,0">
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <RadioButton Checked="playlist_mode_radio_Checked" x:Name="playlist_mode_radio" Content="Playlist Mode" IsChecked="False" Margin="10,0"/>
+                    <RadioButton Checked="single_vid_mode_radio_Checked" x:Name="single_vid_mode_radio" Content="Single Video Mode" Margin="10,0"/>
+                    <RadioButton Checked="batch_vid_mode_radio_Checked" x:Name="batch_vid_mode_radio" Content="Batch Video Mode" Margin="10,0"/>
+                </StackPanel>
+            </GroupBox>
+            <!-- Playlist Canvas -->
+            <Canvas x:Name="playlist_mode_display" Visibility="Visible" Grid.Row="2" Margin="-8,10,-10,0">
+                <TextBlock Text="Playlist URL:" TextAlignment="Center" FontFamily="Arial" FontSize="18" Canvas.Left="21" Canvas.Top="8" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock Text="Download mode:" TextAlignment="Center" FontFamily="Arial" FontSize="13" Canvas.Left="26" Canvas.Top="53" HorizontalAlignment="Center" VerticalAlignment="Top" Height="14"/>
+                <TextBox TextChanged="playlist_url_box_TextChanged" x:Name="playlist_url_box" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="129" Canvas.Top="9" Width="467"></TextBox>
+                <Button x:Name="refresh_playlist_btn" Click="refresh_playlist_btn_Click" IsEnabled="False" Visibility="Hidden" Background="Transparent" Height="18" Width="25" RenderTransformOrigin="0.562,0.547" Canvas.Left="601" Canvas.Top="9" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image>
+                        <Image.Source>./Sprites/arrow-rotate-clockwise-270.png</Image.Source>
+                    </Image>
+                </Button>
+                <StackPanel x:Name="playlist_download_mode_frame" IsEnabled="False" Orientation="Horizontal" Height="34" Canvas.Left="136" Canvas.Top="45" Width="396" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <RadioButton x:Name="playlist_dwnl_mode_all" Checked="playlist_dwnl_mode_all_Checked" IsChecked="False" FontFamily="Arial" FontSize="13" Height="16" Margin="15,0,0,0" Content="Download all videos"/>
+                    <RadioButton x:Name="playlist_dwn_mode_select" Checked="playlist_dwn_mode_select_Checked" FontFamily="Arial" FontSize="13" Margin="95, 0, 0, 0" Height="16" Content="Download manually"/>
+                </StackPanel>
+
+                <!-- Download mode displays-->
+                <Grid Visibility="Hidden" x:Name="manual_playlist_dwnl_mode" Height="295" Canvas.Left="26" Canvas.Top="84" Width="579" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <TextBlock x:Name="loading_items_display" Text="Loading playlist contents..." Foreground="Orange" FontSize="14" FontFamily="Arial" Margin="0,20,312,257"/>
+                    <ListView x:Name="playlist_contents" IsEnabled="False" Height="149" Width="559" Canvas.Left="71" Canvas.Top="84" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="Playlist videos:" Margin="0,47,497,225"/>
+                    <StackPanel x:Name="select_buttons_display" Orientation="Horizontal" IsEnabled="False" Margin="97,33,285,211" >
+                        <Button x:Name="select_all_playlist_vid_btn" Click="select_all_playlist_vid_btn_Click" Background="#4287f5" Foreground="Black" Height="15" FontSize="11.5" FontFamily="Arial" Width="88">Select All</Button>
+                        <Button x:Name="desselect_all_playlist_vid_btn" Click="desselect_all_playlist_vid_btn_Click" Background="#4287f5" Foreground="Black" Height="15" Margin="15, 0, 0, 0" FontSize="11.5" FontFamily="Arial" Width="88" Content="Deselect All"/>
+                    </StackPanel>
+                    <Button x:Name="download_selected_playlist_items_btn" IsEnabled="False" Click="download_selected_playlist_items_btn_Click" Margin="195,222,159,18" FontFamily="Arial" FontSize="13" Background="#4287f5">Download Selected</Button>
+                </Grid>
+
+                <Grid Visibility="Visible" x:Name="auto_playlist_dwnl_mode" Height="59" Canvas.Left="26" Canvas.Top="120" Width="633" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Button x:Name="download_all_playlist_items_btn" IsEnabled="False" Click="download_all_playlist_items_btn_Click" Margin="113,15,140,15" FontFamily="Arial" FontSize="15" Background="#4287f5">Download Playlist</Button>
+                </Grid>
+
+
+            </Canvas>
+
+            <!-- Single Video Canvas -->
+            <Canvas x:Name="video_mode_display" Visibility="Hidden" Margin="0,10,10,10" Grid.Row="2">
+                <TextBlock FontFamily="Arial" FontSize="15" Canvas.Left="12" Canvas.Top="9" Height="18" Width="80">Video URL:</TextBlock>
+                <TextBox TextChanged="video_url_box_TextChanged" x:Name="video_url_box" FontSize="13" FontFamily="Arial" Canvas.Left="97" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="533"/>
+                <Button x:Name="download_single_video_btn" FontFamily="Arial" FontSize="16" Height="30" Width="142" Click="download_single_video_btn_Click" Background="#4287f5" Canvas.Left="249" Canvas.Top="55">Download video</Button>
+            </Canvas>
+
+            <!-- Batch Video Canvas -->
+            <Canvas x:Name="batch_video_mode_display" Visibility="Hidden" Margin="0,10,0,23" Grid.Row="2">
+                <TextBlock FontFamily="Arial" FontSize="15" Canvas.Left="12" Canvas.Top="9" Height="18" Width="80">Video URL:</TextBlock>
+                <TextBox TextChanged="_batch_video_url_box_TextChanged" x:Name="_batch_video_url_box" FontSize="13" FontFamily="Arial" Canvas.Left="97" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="481"/>
+                <Button x:Name="add_vid_btn" IsEnabled="False" FontSize="12" FontFamily="Arial" HorizontalAlignment="Left" Click="add_vid_btn_Click" Background="#4287f5" VerticalAlignment="Center" Width="64" Canvas.Left="583" Canvas.Top="10" Height="17">Add</Button>
+                <TextBlock x:Name="loading_batch_video_display" Visibility="Hidden" FontFamily="Arial" FontSize="11" Foreground="Orange" Canvas.Left="10" Canvas.Top="39" HorizontalAlignment="Left" VerticalAlignment="Center" Width="86">Loading video...</TextBlock>
+                <TextBlock FontFamily="Arial" FontSize="14" Canvas.Left="10" Canvas.Top="61">Video download list</TextBlock>
+                <TextBlock x:Name="batch_video_item_count_display" FontFamily="Arial" FontSize="10" Canvas.Left="10" Canvas.Top="89" HorizontalAlignment="Center" VerticalAlignment="Top">Videos: 0</TextBlock>
+
+                <ListView x:Name="batch_video_list" IsEnabled="False" Height="184" Width="637" Canvas.Left="10" Canvas.Top="112" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Button FontFamily="14" FontSize="11" IsEnabled="False" Background="#4287f5" x:Name="remove_selected_batch_video_btn" Click="remove_selected_batch_video_btn_Click" Canvas.Left="154" Canvas.Top="59" HorizontalAlignment="Center" VerticalAlignment="Center" Width="104">Remove selected</Button>
+                <Button x:Name="download_batch_video_list_btn" Background="#4287f5" Click="download_batch_video_list_btn_Click" FontFamily="Arial" FontSize="16" Canvas.Left="248" Canvas.Top="312" Height="33" Width="154" HorizontalAlignment="Center" VerticalAlignment="Top">Download videos</Button>
+            </Canvas>
+            <!-- Video Quality selection -->
+            <Canvas x:Name="video_output_display" IsVisibleChanged="video_output_display_IsVisibleChanged" Visibility="Hidden" Margin="181,79,87,282" Grid.Row="2">
+                <TextBlock x:Name="playlist_items_count_display" Text="Videos in playlist: 0" Canvas.Left="-127" Canvas.Top="60" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock Text="Video output format:" HorizontalAlignment="Center" FontFamily="Arial" FontSize="15" VerticalAlignment="Top" Width="157" Height="21" Canvas.Left="-159" Canvas.Top="2"/>
+                <StackPanel x:Name="output_format_panel" Orientation="Horizontal" Margin="0,5,0,0">
+                    <RadioButton x:Name="audio_video_radio" Checked="audio_video_radio_Checked" FontFamily="Arial"  FontSize="14.5">Full (audio+video)</RadioButton>
+                    <RadioButton x:Name="audio_only_radio" Checked="audio_only_radio_Checked" FontFamily="Arial" Margin="20,0,0,0" FontSize="14.5">Audio Only</RadioButton>
+                </StackPanel>
+                <TextBlock FontFamily="Arial" FontSize="15" Canvas.Left="-130" Canvas.Top="37" HorizontalAlignment="Left" VerticalAlignment="Center">Download path:</TextBlock>
+                <TextBox x:Name="download_path_box" TextChanged="download_path_box_TextChanged" FontFamily="Arial" FontSize="12" Canvas.Left="-17" Canvas.Top="38" HorizontalAlignment="Left" VerticalAlignment="Center" Width="400"/>
+                <Button x:Name="folder_open_button" IsEnabled="True" Click="folder_open_button_Click" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Width="24" Canvas.Left="388" Canvas.Top="38" Height="16">
+                    <Image>
+                        <Image.Source>./Sprites/folder-orange.png</Image.Source>
+                    </Image>
+                </Button>
+                <Button x:Name="set_download_properties_btn" Click="set_download_properties_btn_Click" IsEnabled="False" FontFamily="Arial" FontSize="15" Background="#4287f5" Canvas.Left="60" Canvas.Top="91" HorizontalAlignment="Center" VerticalAlignment="Top" Width="161">Confirm</Button>
+                <Button x:Name="return_btn" Click="return_btn_Click" IsEnabled="True" FontFamily="Arial" FontSize="13" Background="Red" Canvas.Left="60" Canvas.Top="117" HorizontalAlignment="Center" VerticalAlignment="Top" Width="161" Height="16">Back</Button>
+                <TextBlock x:Name="download_status_label" Visibility="Hidden" FontFamily="Arial" FontSize="14" Text="Download status: downloading..." Canvas.Left="31" Canvas.Top="145" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250"/>
+            </Canvas>
+        </Grid>
+    </Viewbox>
+</Window>

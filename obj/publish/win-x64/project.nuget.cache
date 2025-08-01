@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RrVmtmLbW2c=",
+  "success": true,
+  "projectFilePath": "D:\\Repos\\Youtube Downloader\\Youtube Downloader.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexandru\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.18\\microsoft.net.illink.tasks.8.0.18.nupkg.sha512"
+  ],
+  "logs": []
+}

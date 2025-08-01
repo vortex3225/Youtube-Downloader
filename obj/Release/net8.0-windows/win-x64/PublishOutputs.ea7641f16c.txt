@@ -1,0 +1,3 @@
+D:\C# Projects\YoutubeDownloader_NormalV\Youtube Downloader.pdb
+D:\C# Projects\YoutubeDownloader_NormalV\Youtube Downloader.dll.config
+D:\C# Projects\YoutubeDownloader_NormalV\Youtube Downloader.exe

@@ -1,0 +1,17 @@
+﻿<Window x:Class="Youtube_Downloader.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Youtube_Downloader"
+        mc:Ignorable="d"
+        Title="Settings" Height="250" MaxHeight="250" MaxWidth="350" MinWidth="350" MinHeight="250" Width="350" 
+        ShowInTaskbar="True"
+        >
+    <Grid>
+        <StackPanel Margin="10,10,10,10" Orientation="Vertical">
+            <CheckBox x:Name="display_warnings_checkbox" Click="display_warnings_checkbox_Click" Content="Display warnings" IsChecked="True" Margin="0, 0, 0, 5"/>
+            <CheckBox x:Name="save_output_path_checkbox" Click="save_output_path_checkbox_Click" Content="Save output path" IsChecked="False" Margin="0, 0, 0, 5"/>
+        </StackPanel>
+    </Grid>
+</Window>

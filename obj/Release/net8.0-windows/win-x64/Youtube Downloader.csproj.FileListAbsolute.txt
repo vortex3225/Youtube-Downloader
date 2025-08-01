@@ -1,0 +1,25 @@
+D:\Repos\Youtube Downloader\bin\Release\net8.0-windows\win-x64\Youtube Downloader.exe
+D:\Repos\Youtube Downloader\bin\Release\net8.0-windows\win-x64\Youtube Downloader.dll.config
+D:\Repos\Youtube Downloader\bin\Release\net8.0-windows\win-x64\Youtube Downloader.deps.json
+D:\Repos\Youtube Downloader\bin\Release\net8.0-windows\win-x64\Youtube Downloader.runtimeconfig.json
+D:\Repos\Youtube Downloader\bin\Release\net8.0-windows\win-x64\Youtube Downloader.dll
+D:\Repos\Youtube Downloader\bin\Release\net8.0-windows\win-x64\Youtube Downloader.pdb
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\ResourceDictionary.baml
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\MainWindow.g.cs
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\Settings.g.cs
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\App.g.cs
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\Youtube Downloader_Content.g.cs
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\Youtube Downloader_MarkupCompile.cache
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\Youtube Downloader_MarkupCompile.lref
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\MainWindow.baml
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\Settings.baml
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\Youtube Downloader.g.resources
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\Youtube Downloader.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\Youtube Downloader.AssemblyInfoInputs.cache
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\Youtube Downloader.AssemblyInfo.cs
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\Youtube Downloader.csproj.CoreCompileInputs.cache
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\Youtube Downloader.dll
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\refint\Youtube Downloader.dll
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\Youtube Downloader.pdb
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\Youtube Downloader.genruntimeconfig.cache
+D:\Repos\Youtube Downloader\obj\Release\net8.0-windows\win-x64\ref\Youtube Downloader.dll

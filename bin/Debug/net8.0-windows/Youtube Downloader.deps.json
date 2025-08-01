@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Youtube Downloader/1.0.0": {
+        "runtime": {
+          "Youtube Downloader.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Youtube Downloader/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
