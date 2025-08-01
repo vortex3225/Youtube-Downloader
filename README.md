@@ -1,6 +1,6 @@
 Youtube Downloader
 
-Version 0.0.1
+Version 1.0.0
 
 Easily download playlists and videos without an API key!
 
