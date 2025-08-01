@@ -49,8 +49,7 @@
               "ToolTip": "D:\\Repos\\Youtube Downloader\\Settings.xaml",
               "RelativeToolTip": "Settings.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-01T17:02:30.892Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T17:02:30.892Z"
             },
             {
               "$type": "Document",
@@ -61,8 +60,7 @@
               "ToolTip": "D:\\Repos\\Youtube Downloader\\ResourceDictionary.xaml",
               "RelativeToolTip": "ResourceDictionary.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-01T16:52:53.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T16:52:53.97Z"
             },
             {
               "$type": "Document",
@@ -100,8 +98,7 @@
               "RelativeToolTip": "AppSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T15:23:23.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T15:23:23.013Z"
             },
             {
               "$type": "Document",
@@ -112,8 +109,7 @@
               "ToolTip": "D:\\Repos\\Youtube Downloader\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-27T14:25:46.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T14:25:46.403Z"
             },
             {
               "$type": "Document",
@@ -123,7 +119,7 @@
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "D:\\Repos\\Youtube Downloader\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAN0CAAAAAAAAAAAawPUCAACBAAAAAAAAAA==",
+              "ViewState": "AgIAAN0CAAAAAAAAAAAawPcCAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-27T14:25:46.175Z",
               "EditorCaption": ""

@@ -756,6 +756,8 @@ namespace Youtube_Downloader
 
                 Easily download playlists or videos from Youtube.
                 ! You cannot download private content, playlists/videos must be public or unlisted to be able to be downloaded. !
+
+                Github page: https://github.com/vortex3225/Youtube-Downloader
                 """);
         }
 
